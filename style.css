@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  color: hsl(225, 20%, 60%);
+}
+body {
+  background-image: url(./images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-color: hsl(230, 100%, 99%);
+  text-align: center;
+}
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 3em auto;
+}
+.description {
+  background-image: url(./images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3em 0;
+}
+.description > h2 {
+  color: hsl(227, 35%, 25%);
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+.description > p {
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+form {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 2em;
+  box-shadow: 0 15px 15px 0 hsla(226, 100%, 87%, 0.1);
+}
+.pricing {
+  padding: 3em 0 1em 0;
+}
+.pricing > p {
+  letter-spacing: 2px;
+}
+.slider-container {
+  width: 90%;
+  position: relative;
+  margin: 3em auto;
+}
+.slider-bar {
+  background: hsl(224, 65%, 95%);
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  z-index: 1;
+  border-radius: 5px;
+}
+.fill {
+  background-color: hsl(174, 77%, 80%);
+  height: 10px;
+  width: 50%;
+  border-radius: 5px;
+}
+.slider {
+  position: relative;
+  z-index: 2;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  background-image: url(./images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  background-color: hsl(174, 86%, 45%);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 20px 20px 0 hsla(174, 86%, 45%, 0.4);
+  outline: none;
+}
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price > b {
+  color: hsl(227, 35%, 25%);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-right: 5px;
+}
+.bill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 3em 0;
+}
+.bill > span {
+  font-size: 0.9rem;
+}
+.bill > div {
+  width: 40px;
+  height: 20px;
+  background-color: hsl(223, 50%, 87%);
+  border-radius: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.bill > div:hover {
+  background-color: hsl(174, 77%, 80%);
+}
+.bill > div > div {
+  width: 12.5px;
+  height: 12.5px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 3.75px 0 0 3.75px;
+}
+.toggle > div {
+  transform: translateX(20px);
+}
+.bill > span:last-child {
+  position: relative;
+}
+.bill > span:last-child::after {
+  content: "-25%";
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
+  padding: 2px 8px;
+  border-radius: 10px;
+  position: absolute;
+  left: 110%;
+  bottom: -2px;
+}
+.line {
+  background-color: hsl(230, 100%, 99%);
+  width: 100%;
+  height: 2px;
+  margin: 2em 0;
+}
+.feature {
+  margin-bottom: 0.7em;
+}
+.feature > img {
+  margin-right: 15px;
+}
+.form-small > button {
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(226, 100%, 87%);
+  padding: 1em 3.5em;
+  margin: 2em 0 2.5em 0;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+@media only screen and (min-width: 500px) {
+  .description {
+    padding: 4em 0;
+    margin: 4em 0;
+  }
+  .description > h2 {
+    font-size: 2.25rem;
+  }
+  .description > p {
+    display: inline-block;
+  }
+  form {
+    padding: 2em 4em;
+  }
+  .pricing {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+  }
+  .pricing > p {
+    position: absolute;
+    left: 0;
+    font-weight: 800;
+  }
+  .slider-container {
+    position: absolute;
+    top: 180%;
+    width: 100%;
+    margin: 0;
+  }
+  .price {
+    position: absolute;
+    right: 0;
+  }
+  .bill {
+    margin: 100px 0 1.5em 0;
+  }
+  .bill > span:last-child::after {
+    content: "25% discount";
+    width: max-content;
+  }
+  .line {
+    height: 2px;
+    margin: 3em 0 2em 0;
+  }
+  .form-small {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .feature {
+    text-align: left;
+  }
+  .form-small > button {
+    padding: 1em 4em;
+    margin: 0;
+  }
+}
